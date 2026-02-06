@@ -1,0 +1,194 @@
+/* 基础容器：建议将内容包裹在此类中，以免污染全局样式 */
+.parametrix-doc-content {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  color: #111827; /* 深灰近黑，提供极佳的阅读对比度 */
+  line-height: 1.65; /* 宽松的行高 */
+  font-size: 16px;
+  max-width: 768px; /* 限制最大宽度以保证阅读体验 */
+  margin: 0 auto;
+}
+
+/* ================== 标题 (Headings) ================== */
+/* parametrix 风格的标题通常加粗且颜色很深，H1/H2 间距较大 */
+
+.parametrix-doc-content h1,
+.parametrix-doc-content h2,
+.parametrix-doc-content h3,
+.parametrix-doc-content h4,
+.parametrix-doc-content h5,
+.parametrix-doc-content h6 {
+  color: #000000;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+  line-height: 1.25;
+}
+
+.parametrix-doc-content h1 {
+  font-size: 2.25rem; /* ~36px */
+  font-weight: 700;
+  margin-top: 0; /* 页面首个标题通常无上边距 */
+  margin-bottom: 1rem;
+  letter-spacing: -0.025em;
+}
+
+.parametrix-doc-content h2 {
+  font-size: 1.75rem; /* ~28px */
+  border-bottom: 1px solid #e5e7eb; /* 只有 H2 通常会带一根淡淡的分割线 */
+  padding-bottom: 0.3em;
+  margin-top: 2.5rem;
+}
+
+.parametrix-doc-content h3 {
+  font-size: 1.375rem; /* ~22px */
+  margin-top: 2rem;
+}
+
+.parametrix-doc-content h4 {
+  font-size: 1.125rem; /* ~18px */
+}
+
+/* ================== 正文与文本 (Text) ================== */
+
+.parametrix-doc-content p {
+  margin-bottom: 1.25rem;
+  color: #374151; /* 稍浅一点的灰色，减少视觉疲劳 */
+}
+
+/* 链接：parametrix 使用标志性的蓝色 */
+.parametrix-doc-content a {
+  color: #155eef; /* parametrix/Modern Web Blue */
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.parametrix-doc-content a:hover {
+  border-bottom-color: #155eef;
+}
+
+/* 强调 */
+.parametrix-doc-content strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* ================== 列表 (Lists) ================== */
+
+.parametrix-doc-content ul,
+.parametrix-doc-content ol {
+  list-style: disc;
+  margin-bottom: 1.25rem;
+  padding-left: 1.625rem;
+  color: #374151;
+}
+
+.parametrix-doc-content li {
+  margin-bottom: 0.5rem; /* 列表项之间保持呼吸感 */
+  padding-left: 0.25rem;
+}
+
+.parametrix-doc-content li::marker {
+  color: #9ca3af; /* 序号/圆点颜色较浅 */
+}
+
+/* 嵌套列表间距调整 */
+.parametrix-doc-content ul ul,
+.parametrix-doc-content ol ul,
+.parametrix-doc-content ul ol,
+.parametrix-doc-content ol ol {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ================== 代码 (Code) ================== */
+
+/* 行内代码：浅灰色背景，深色文字，圆角 */
+.parametrix-doc-content code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.875em;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb; /* 极细的边框让它更精致 */
+}
+
+/* 代码块：通常是深色背景或带有高亮 */
+.parametrix-doc-content pre {
+  background-color: #1f2937; /* 深色背景 */
+  color: #e5e7eb;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.parametrix-doc-content pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border: none;
+  font-size: 0.9em;
+}
+
+/* ================== 引用 (Blockquote) ================== */
+/* parametrix 风格的引用通常是带有左侧竖线的灰色块 */
+
+.parametrix-doc-content blockquote {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1rem 0.5rem 1.25rem;
+  border-left: 4px solid #e5e7eb; /* 默认灰色竖线 */
+  color: #4b5563;
+  background: transparent; /* 或者极淡的 #f9fafb */
+  font-style: italic;
+}
+
+/* 提示框风格（Admonitions - 模拟文档中的 Callout） */
+.parametrix-doc-content .callout {
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  background-color: #eff6ff; /* 浅蓝背景 */
+  border-left: 4px solid #3b82f6; /* 蓝色竖线 */
+  color: #1e3a8a;
+}
+
+/* ================== 表格 (Table) ================== */
+
+.parametrix-doc-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.95em;
+}
+
+.parametrix-doc-content th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.parametrix-doc-content td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: #4b5563;
+}
+
+.parametrix-doc-content tr:last-child td {
+  border-bottom: none;
+}
+
+/* ================== 分割线 (HR) ================== */
+
+.parametrix-doc-content hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 2.5rem 0;
+}
