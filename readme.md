@@ -32,11 +32,16 @@ const markdown = `
 
 这是一段普通的 Markdown 内容。
 
-:::card{title="提示" bg-color="#1a365d"}
-这是一个自定义卡片组件的内容。
-:::
+:::card{title="我的卡片3",bg-color="blue"}
+:::card{title="我的卡片4",bg-color="white"}
+parse-md-with-components
+/:::card
+:::card{title="我的卡片5",bg-color="gray"}
+parse-md-with-components
+/:::card
+/:::card
 `;
-
+//注意 startTag 和 endTag 必须不同，且 startTag 与 endTag 不应是包换关系（不可能同时 startsWith 为true）
 const html = transferMdToHtml({
   content: markdown,
   startTag: ":::",
